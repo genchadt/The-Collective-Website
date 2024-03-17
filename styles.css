@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+    background: radial-gradient(circle at 30% 80%, #25CE9C 30%, #9A519E 80%);
+    background-attachment: fixed;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #181A1B;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 8px 8px 20px #0000001f;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-container h1 {
+    background-image: linear-gradient(to right, #23D09C, #7B4281);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    transition: box-shadow 0.3s ease;
+}
+
+.logo-link {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-link:hover .logo {
+    box-shadow: 0 0 15px rgba(35, 208, 156, 0.55); /* Adjust color and spread for desired glow */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #9A519E;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+.nav-button, .nav-button * {
+    user-select: none; 
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: #2A2C2E;
+    color: #FFFFFF;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    flex-grow: 1;
+    margin: 0 10px;
+    box-shadow: 0 4px 6px #0000001A;
+    width: 100%;
+}
+
+/* The next two elements are for static buttons i.e. those that may not be clicked. Disabled!
+.nav-button.static {
+    pointer-events: none;
+    cursor: default;
+}
+*/
+
+/* 
+.nav-button.static:hover, .nav-button.static:active {
+    transform: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: #2A2C2E;
+}
+*/
+
+.nav-button-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.nav-button-description {
+    color: #6C757D; 
+    font-size: 0.9rem;
+    text-align: center;
+    transition: color 0.3s ease; 
+}
+
+.nav-button:hover .nav-button-description {
+    color: #FFFFFF; 
+    font-weight: bold;
+}
+
+.nav-button i {
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+
+.nav-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px #00000033;
+    background-color: #25CE9C;
+}
+
+.nav-button:active {
+    transform: scale(0.95);
+}
+
+.nav-description {
+    color: #6C757D;
+    font-size: 0.9em;
+    margin-top: 5px;
+    text-align: center;
+    max-width: 90%;
+}
+
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.content {
+    color: #FFFFFF;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+.content:last-child {
+    margin-bottom: 0;
+}
+
+.details {
+    font-style: italic;
+    color: #6C757D;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.section-divider {
+    border: none;
+    height: 1px;
+    background-image: linear-gradient(to right, #23D09C, #7B4281);
+    margin-top: 25px;
+    margin-bottom: 25px
+}
+
+.content > section {
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.content > section p {
+    max-width: 775px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+.content > footer {
+    font-size: 0.9em;
+}
+
+footer {
+    color: #6C757D;
+    margin-top: auto;
+}
+
+.discord-servers {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.discord-server {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background-color: #2A2C2E;
+    border-radius: 10px;
+    padding: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px #0000004D;
+}
+
+.discord-server:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    background-color: #3D4143;
+}
+
+.discord-server:hover .server-description {
+    color: #FFFFFF;
+    /* font-weight: bold; */
+}
+
+.server-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: border-radius 0.3s;
+    margin-bottom: 10px;
+}
+
+.discord-server:hover .server-logo {
+    border-radius: 40%;
+}
+
+.server-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.server-name {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.server-description {
+    color: #6C757D;
+    font-size: 0.9em;
+    margin-top: 5px;
+    text-align: center;
+    max-width: 90%;
+    transition: color 0.3s ease;
+}
+
+/* Mobile Handling */
+@media (max-width: 600px) {
+    html {
+        font-size: 14px; 
+    }
+
+    .container {
+        width: 95%; 
+        padding: 10px; 
+    }
+
+    .header-container, .nav-buttons, .discord-servers {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    nav ul {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .nav-button {
+        padding: 10px; 
+        margin: 5px 0; 
+        width: 100%; 
+    }
+
+    .logo, .nav-button i, .server-logo {
+        width: 80px; 
+        height: auto; 
+    }
+
+    .logo-container h1, .nav-button-name, .server-name {
+        font-size: calc(1em + 1vw); 
+    }
+
+    .nav-button, .discord-server {
+        border-radius: 8px; 
+        padding: 10px;
+        flex-grow: 1; 
+        width: 100%; 
+    }
+
+    .discord-server {
+        
+        justify-content: center; 
+    }
+
+    .section-divider {
+        margin-top: 10px; 
+        margin-bottom: 10px; 
+    }
+}

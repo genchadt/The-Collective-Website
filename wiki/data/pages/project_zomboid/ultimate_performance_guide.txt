@@ -1,0 +1,46 @@
+====== Project Zomboid Ultimate Performance Guide ======
+
+Hello! This guide is designed to help with performance in our modded Project Zomboid server. We have a large number of mods installed that add lots of maps, vehicles, and other assets; requiring a more powerful machine than the developers originally envisioned.
+
+<wrap em>For this reason, we advise that you ensure your system at least meets the recommended specs listed below.</wrap>
+
+===== Recommended System Requirements =====
+
+While this guide is designed to improve framerates and your experience in-game, we unfortunately cannot add hardware to your machine. If your system does not meet or exceed the specs below it may even refuse to boot.
+
+|< 100% 20% >|
+
+^OS|Windows 10, 64 Bit|
+^64bit OS required^|
+^Processor|Intel 2.77GHz Quad-core|
+^Memory|8Gb Ram|
+^Hard Disk Space|5gig|
+^Video Card|Dedicated graphics card with 2 GB of RAM minimum, OpenGL 2.1 and GLSL 1.2 support \\ (generally 2012 or newer)|
+^Sound|FMOD compatible sound card|
+
+<WRAP round ALERT>If your system does not meet or exceed recommend specs, you may not be able to connect or even boot the game!</WRAP>
+
+==== Increasing RAM Allocation ====
+
+  - Find your Zomboid install location. By default it's `C:\Program Files (x86)\Steam\steampps\common\ProjectZomboid`
+  - Locate a file titled `ProjectZomboid64.json` and edit it in your Notepad application
+  - In that file, look for the following entry (you may only have Xmx3072m):
+      * "-Xms3072m",
+      * "-Xmx3072m",
+  - Edit these lines to give yourself the appropriate amount of RAM. 1 GB is 1024 MB. Here's a quick list of values below:
+      * 4 GB —→ `4096m`
+      * 6 GB —→ `6144m`
+      * 8 GB —→ `8192m`
+      * 12 GB —→ `12288m`
+  - Save the file and run the game normally.
+
+<WRAP round HELP>Don't bother allocating more than 12 GB of RAM. Performance gains top out at around 10-12 GB!</WRAP>
+
+===== Verify File Integrity =====
+
+Occasionally you may be asked to "verify files", or verify the integrity of your game files. This is due to either the files becoming corrupted or mismatched. In that case, follow the guide linked below:
+
+  * [[https://help.steampowered.com/en/faqs/view/0C48-FCBD-DA71-93EB|Steam Support :: Verify Integrity of Game Files]]
+
+~~DISCUSSION~~{{tag>Project_Zomboid}}
+

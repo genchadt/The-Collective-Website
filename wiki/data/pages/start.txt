@@ -1,0 +1,14 @@
+====== Welcome to The Collective's Wiki ======
+
+We are a small but tight-knit group hosting a variety of gaming servers. This wiki is designed as a place for us to post community-specific articles for quick access. [[:joining|Get help joining our servers]], read our [[:rules_and_guidelines|rules and guidelines]], or [[:suggest|suggest new topics]].
+
+===== 🚧 Wiki Under Construction! 🚧 =====
+
+<WRAP round TODO>Sorry for the lack of content! We're currently porting things over from our [[https://the-collective-pz.fandom.com/wiki/The_Collective_PZ_Wiki|old wiki]].</WRAP>
+
+===== For Staff =====
+
+  * [[:admin|Staff Pages]]
+
+~~NOTOC~~
+

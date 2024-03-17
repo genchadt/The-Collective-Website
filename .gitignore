@@ -1,0 +1,59 @@
+# Ignore all .env files
+*.env
+
+# Ignore all files that may contain API keys or secrets
+*key*
+*secret*
+*password*
+*.pem
+*.key
+*.pkcs12
+*.p12
+*.pfx
+*credentials*
+*config.yml
+*config.yaml
+
+# Ignore specific directories where sensitive files might be stored
+secrets/
+config/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore specific file types that might contain sensitive information
+*.cert
+*.cer
+*.crt
+*.csr
+*.json
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Dependency directories
+node_modules/
+jspm_packages/
+bower_components/
+
+# Optional: Ignore IDE and text editor directories
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*.sublime*
+project.lock.json
+project.fragment.lock.json
+

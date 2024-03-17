@@ -1,0 +1,202 @@
+/**
+ * This file provides styles for the diff view, which shows you
+ * differences between two versions of a page (?do=diff).
+ */
+
+.dokuwiki div.table {
+    border-radius: 0.25rem;
+    background-color: var(--color-dark-7);
+    padding: 0.75rem;
+}
+
+.dokuwiki table.diff {
+    width: 100%;
+    border-width: 0;
+}
+.dokuwiki table.diff th,
+.dokuwiki table.diff td {
+    vertical-align: top;
+    padding: 0;
+    border-width: 0;
+    /* no style.ini colours because deleted and added lines have a fixed background colour */
+    background-color: var(--color-dark-7);
+    color: var(--color-dark-1);
+}
+
+.dokuwiki table.diff.diff_inline tr:nth-child(n + 6) td:last-child {
+    background-color: var(--color-dark-6);
+}
+
+/* table header */
+.dokuwiki table.diff th {
+    border-bottom: 1px solid @ini_border;
+    font-size: 110%;
+    font-weight: normal;
+    color: var(--color-dark-2);
+    padding: 0.25rem 0.3125rem;
+}
+.dokuwiki table.diff th a {
+    font-weight: bold;
+}
+.dokuwiki table.diff th span.user {
+    font-size: .75em;
+}
+.dokuwiki table.diff th span.sum {
+    font-size: .9em;
+    font-weight: bold;
+}
+.dokuwiki table.diff th.minor {
+    color: var(--color-dark-2);
+}
+.dokuwiki table.diff_sidebyside th {
+    width: 50%;
+}
+
+/* table body */
+.dokuwiki table.diff .diff-lineheader {
+    width: .7em;
+    text-align: center;
+    padding: 0 0.25rem 0 0.5rem;
+}
+[dir=rtl] .dokuwiki table.diff .diff-lineheader {
+    text-align: left;
+}
+
+.dokuwiki table.diff .diff-lineheader,
+.dokuwiki table.diff td {
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Bitstream Vera Sans Mono", "Nimbus Mono L", Monaco, "Courier New", monospace;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.dokuwiki table.diff td.diff-blockheader {
+    font-weight: bold;
+    padding: 0.3125rem;
+    padding-bottom: 0.125rem;
+}
+
+.dokuwiki table.diff .diff-addedline,
+.dokuwiki table.diff .diff-deletedline,
+.dokuwiki table.diff td.diff-context {
+    padding: 0.5rem;
+}
+
+.dokuwiki table.diff.diff_inline .diff-addedline,
+.dokuwiki table.diff.diff_inline .diff-deletedline,
+.dokuwiki table.diff.diff_inline td.diff-context {
+    padding: 0.0625rem 0.5rem;
+}
+
+.dokuwiki table.diff .diff-addedline {
+    background-color: rgba(64,192,87,.15);
+    color: var(--color-green-3);
+    width: ~"calc(50% - .7em)";
+}
+.dokuwiki table.diff .diff-deletedline {
+    background-color: rgba(250,82,82,.15);
+    color: var(--color-red-3);
+    width: ~"calc(50% - .7em)";
+}
+.dokuwiki table.diff td.diff-context {
+    background-color: var(--color-dark-5);
+    color: var(--color-white);
+    width: ~"calc(50% - .7em)";
+}
+.dokuwiki table.diff td.diff-addedline strong,
+.dokuwiki table.diff td.diff-deletedline strong {
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.dokuwiki table.diff .diff-lineheader:has(+ td.diff-deletedline) {
+    color: var(--color-red-3);
+}
+
+.dokuwiki table.diff .diff-lineheader:has(+ td.diff-addedline) {
+    color: var(--color-green-3);
+}
+
+/* diff options */
+
+.dokuwiki .diffoptions form {
+    float: left;
+}
+.dokuwiki .diffoptions p {
+    float: right;
+}
+
+/* diff nav */
+
+.dokuwiki table.diff_sidebyside td.diffnav {
+    padding-bottom: 1rem;
+    margin: 0;
+}
+
+.dokuwiki table.diff_sidebyside td.diffnav:last-child {
+    text-align: right;
+    padding-right: 0;
+}
+
+.dokuwiki table.diff_sidebyside td.diffnav:last-child a:last-child {
+    margin-right: 0;
+}
+
+.dokuwiki .diffnav a {
+    display: inline-block;
+    vertical-align: middle;
+    height: 2.125em;
+    border-radius: 0.25rem;
+    border: 1px solid @ini_border;
+}
+.dokuwiki .diffnav a span {
+    display: none;
+}
+
+.dokuwiki .diffnav a,
+.dokuwiki table.diff_sidebyside td.diffnav form select,
+.dokuwiki table.diff.diff_inline td.diffnav form select {
+    margin-right: 0.25rem;
+}
+
+.dokuwiki table.diff.diff_inline tr:nth-child(3) td {
+    padding-top: 0.25rem;
+}
+
+
+.dokuwiki .diffnav a:hover,
+.dokuwiki .diffnav a:active,
+.dokuwiki .diffnav a:focus {
+    background-color: var(--color-dark-6);
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+.dokuwiki .diffnav a:before {
+    display: inline-block;
+    color: @ini_text;
+    height: 100%;
+    margin-top: 0.3125rem;
+}
+
+.dokuwiki .diffnav a.diffprevrev:before {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="16" height="14" viewBox="0 0 24 17" stroke-width="1.5" stroke="%23c9c9c9" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>');;
+}
+.dokuwiki .diffnav a.diffnextrev:before,
+.dokuwiki .diffnav a.difflastrev:before {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="16" height="14" viewBox="0 0 24 18" stroke-width="1.5" stroke="%23c9c9c9" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>');
+}
+.dokuwiki .diffnav a.diffbothprevrev:before {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevrons-left" width="20" height="14" viewBox="0 0 24 18" stroke-width="1.5" stroke="%23c9c9c9" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11 7l-5 5l5 5" /><path d="M17 7l-5 5l5 5" /></svg>');
+}
+.dokuwiki .diffnav a.diffbothnextrev:before {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevrons-right" width="20" height="14" viewBox="0 0 24 18" stroke-width="1.5" stroke="%23c9c9c9" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7l5 5l-5 5" /><path d="M13 7l5 5l-5 5" /></svg>');
+}
+
+.dokuwiki .diffnav select {
+    width: 60%;
+    min-width: 9em;
+    height: 2.25em; /* height is necessary for longer options in Webkit */
+}
+
+.dokuwiki .diffnav select option[selected] {
+    font-weight: bold;
+}

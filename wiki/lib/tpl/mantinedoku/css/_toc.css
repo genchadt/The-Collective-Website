@@ -1,0 +1,93 @@
+/**
+ * This file provides styles for the TOC (table of contents), the
+ * sitemap (?do=index) and backlinks (?do=backlink).
+ */
+
+/* toc
+********************************************************************/
+
+/* toc container */
+#dw__toc {
+    float: right;
+    margin: 0 0 1.4em 1.4em;
+    width: 12em;
+    background-color: @ini_background_alt;
+    color: inherit;
+}
+[dir=rtl] #dw__toc {
+    float: left;
+    margin: 0 1.4em 1.4em 0;
+}
+
+/*____________ toc header ____________*/
+
+.dokuwiki h3.toggle {
+    padding: .2em .5em;
+    font-weight: bold;
+}
+
+.dokuwiki .toggle strong {
+    float: right;
+    margin: 0 .2em;
+}
+[dir=rtl] .dokuwiki .toggle strong {
+    float: left;
+}
+
+/*____________ toc list ____________*/
+
+#dw__toc > div {
+    padding: .2em .5em;
+}
+#dw__toc ul {
+    padding: 0;
+    margin: 0;
+}
+#dw__toc ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.1;
+}
+#dw__toc ul li div.li {
+    padding: .15em 0;
+}
+#dw__toc ul ul {
+    padding-left: 1em;
+}
+[dir=rtl] #dw__toc ul ul {
+    padding-left: 0;
+    padding-right: 1em;
+}
+#dw__toc ul ul li {
+}
+#dw__toc ul li a {
+}
+
+/* in case of toc list jumping one level
+  (e.g. if heading level 3 follows directly after heading level 1) */
+#dw__toc ul li.clear {
+}
+
+
+/* sitemap (and backlinks)
+********************************************************************/
+
+.dokuwiki ul.idx {
+    padding-left: 0;
+}
+[dir=rtl] .dokuwiki ul.idx {
+    padding-right: 0;
+}
+.dokuwiki ul.idx li {
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-filled" width="8" height="8" viewBox="-5 -5 32 32" stroke-width="1.5" stroke="%23ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" stroke-width="0" fill="%23ffffff" /></svg>');
+}
+.dokuwiki ul.idx li.open {
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="12" height="12" viewBox="0 0 18 16" stroke-width="1.5" stroke="%23ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg>');
+}
+.dokuwiki ul.idx li.closed {
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="12" height="12" viewBox="0 0 18 18" stroke-width="1.5" stroke="%23ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>');
+}
+[dir=rtl] .dokuwiki ul.idx li.closed {
+    list-style-image: url(../../images/closed-rtl.png);
+}

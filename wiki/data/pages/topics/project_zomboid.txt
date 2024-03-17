@@ -1,0 +1,9 @@
+====== Topics: Project Zomboid ======
+
+<nspages project_zomboid -h1>
+
+----
+
+~~DISCUSSION~~
+
+{{tag>Project_Zomboid}}
