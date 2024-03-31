@@ -1,3 +1,6 @@
+# Ignore Wiki
+wiki/
+
 # Ignore all .env files
 *.env
 
