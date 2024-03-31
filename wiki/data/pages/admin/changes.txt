@@ -1,3 +1,0 @@
-====== Latest Changes to the Wiki ======
-
-{{changes>}}

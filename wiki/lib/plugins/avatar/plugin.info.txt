@@ -1,8 +1,0 @@
-# General Plugin Info
-base   avatar
-author Daniel Rodrigues, Michael Hamann, Gina Häußge, et al.
-email  danieldiasr@gmail.com
-date   2023-12-04
-name   Avatar
-desc   Displays avatar images
-url    https://www.dokuwiki.org/plugin:avatar
